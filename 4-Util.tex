@@ -49,7 +49,7 @@ some examples of coordinate transforms carried out in SunPy using the
 sunpy/wcs/wcs.py:180: RuntimeWarning: invalid value encountered in sqrt
   distance = q - np.sqrt(distance)
 (nan, nan)
-Convert sky coordinate to a position in HCC
+# Convert sky coordinate to a position in HCC
 >>> wcs.convert_hpc_hcc(-300, 400, z=True)
 (-216716967.63331246, 288956420.9477042, 594364636.2208252)
 \end{minted}
@@ -57,7 +57,7 @@ Convert sky coordinate to a position in HCC
 \label{code:wcs_code}
 \end{listing}
 
-\subsubsection{Sun}\label{ssec:util:sun}
+\subsection{Sun}\label{ssec:util:sun}
 The purpose of the \texttt{sun} subpackage is to provide solar-specific data such as ephemerides and
 solar constants. The main namespace contains a number of functions that provide solar
 ephemerides such as the Sun-to-Earth distance, solar-cycle number, the mean 
@@ -103,7 +103,7 @@ To view them all quickly, a \texttt{print\_all()} function is available.
 \label{code:constants_code}
 \end{listing}
 	
-\subsubsection{Instruments}\label{ssec:util:inst}
+\subsection{Instruments}\label{ssec:util:inst}
 In addition to providing support for instrument-specific solar data via the main data 
 classes \texttt{Map}, \texttt{LightCurve}, and \texttt{Spectrum}, 
 some instrument-specific functions may be found within the \texttt{instr} subpackage. 
