@@ -1,3 +1,15 @@
+
+# download some AIA 171 files to the local directory for demonstration purposes
+>>> from sunpy.net import vso
+>>> client = vso.VSOClient()
+>>> tstart, tend = '2011-06-07 06:30','2011-06-07 06:31'
+# search for AIA 171A files over a 1 minute interval and download them
+>>> aia_query = client.query(vso.attrs.Time(tstart,tend),vso.attrs.Instrument('AIA'),vso.attrs.Wave(171,171))
+>>> results = client.get(aia_query,path='./{file}.fits')
+
+# now demonstrate the CubeMap
 >>> import sunpy.map
->>> cubemap = sunpy.map.Map("aia_lev1_171a_2014_01*fits", cube=True)
->>> cubemap.peek() 
+>>> cubemap=sunpy.map.Map('aia_lev1_171a*.fits',cube=True)
+>>> cubemap.maps[0].peek()
+>>> cubemap.maps[4].peek()
+
